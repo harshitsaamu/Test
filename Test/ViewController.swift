@@ -7,19 +7,17 @@
 //
 
 import UIKit
+import WebKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var webView: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+        let url = URL(string: "https://demo.rishav.io")
+        let request = URLRequest(url: url!)
+        self.webView.load(request)
+        
+        self.webView.allowsBackForwardNavigationGestures = true
+        self.webView.
 }
-
